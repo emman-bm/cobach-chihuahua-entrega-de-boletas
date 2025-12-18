@@ -1,7 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+
+<!-- ✅ NECESARIO PARA CELULAR -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Boletas del Alumno</title>
 
 <style>
@@ -40,15 +45,21 @@
     background: #0e6655;
   }
 
-  .menu {
-    margin-top: 10px;
-  }
-
   img {
     display: none;
     width: 100%;
     margin-top: 20px;
     border-radius: 10px;
+  }
+
+  /* =========================
+     ✅ SOLO PARA CELULAR
+     NO CAMBIA PC
+     ========================= */
+  @media (max-width: 480px) {
+    main {
+      width: 95%;
+    }
   }
 </style>
 </head>
