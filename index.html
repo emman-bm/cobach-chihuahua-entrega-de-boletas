@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte Semestral</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #117a65;
+    }
+    header {
+      background-color: #16a085;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    main {
+      max-width: 400px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border: 2px solid #117a65;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #16a085;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background-color: #117a65;
+    }
+  </style>
+</head>
+<body>
+  <header><h2>Reporte Semestral</h2></header>
+ <light><img src="descarga.png" width="250"></light> <main>
+<p><font color= #000000>Ingresa con tu Matricula y numero de Plantel para ver datos del alumno</p></font>
+    <label for="matricula">Matrícula:</label>
+    <input type="text" id="matricula" name="matricula" placeholder="Ej. 01010101">
+
+    <label for="plantel">Plantel:</label>
+    <select id="plantel" name="plantel">
+      <option value="">Selecciona un plantel</option>
+    </select>
+
+    <button onclick="validarAcceso()">Entrar</button>
+  </main>
+
+  <script>
+    const select = document.getElementById("plantel");
+    for (let i = 1; i <= 22; i++) {
+      let option = document.createElement("option");
+      option.value = `Plantel No. ${i}`;
+      option.textContent = `Plantel No. ${i}`;
+      select.appendChild(option);
+    }
+
+    function validarAcceso() {
+      const matricula = document.getElementById("matricula").value;
+      const plantel = document.getElementById("plantel").value;
+
+      if (matricula === "24090979" && plantel === "Plantel No. 9") {
+        window.location.href = "reporte semestral.html";
+      } else {alert;
+      }
+        }
+  </script>
+</body>
+</html>
