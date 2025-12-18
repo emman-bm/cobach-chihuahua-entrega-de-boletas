@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 
-<!-- NECESARIO PARA CELULAR -->
+<!-- ✅ NECESARIO PARA CELULAR -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Boletas del Alumno</title>
@@ -52,23 +52,12 @@
   }
 
   /* =========================
-     SOLO CELULAR
+     ✅ SOLO PARA CELULAR
+     NO CAMBIA PC
      ========================= */
   @media (max-width: 480px) {
-
     main {
-      width: 100%;
-      margin: 15px auto;
-    }
-
-    .btn {
-      padding: 20px;
-      font-size: 18px;
-    }
-
-    img {
-      width: 100%;
-      margin-top: 15px;
+      width: 95%;
     }
   }
 </style>
@@ -90,16 +79,20 @@
 
 <script>
   function mostrarImagen(id) {
+    // ocultar botones
     document.querySelectorAll('.btn').forEach(btn => {
       btn.style.display = 'none';
     });
 
+    // ocultar imágenes
     document.querySelectorAll('img').forEach(img => {
       img.style.display = 'none';
     });
 
+    // mostrar solo la imagen seleccionada
     document.getElementById(id).style.display = 'block';
   }
-<
+</script>
 
-
+</body>
+</html>
